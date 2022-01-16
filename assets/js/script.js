@@ -1,5 +1,9 @@
 // Assignment code here
 
+// I struggled with this assignment but I did not want to skip it. 
+// I am aware that the majority of the grading criteria is missing and I plan on resubmitting it at a later point. 
+// I used console.log() for my generatePassword() variables to show that the prompt responses were being recorded.
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -48,31 +52,35 @@ function generatePassword() {
   promptNumeric = promptNumeric.toLowerCase();
   promptSpecial = promptSpecial.toLowerCase();
 
+  console.log(promptLength);
+  console.log(promptLowercase);
+  console.log(promptUppercase);
+  console.log(promptNumeric);
+  console.log(promptSpecial);
 }
 
 function querySelector() {
   // check for password input 
 
-    if (promptLowercase === "yes") {
-      String.fromCharCode = (97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122)
-    }
-
-    else if (promptUppercase === "yes") {
-      String.fromCharCode = (65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90)
-    }
-
-    else if (promptNumeric === "yes") {
-      String.fromCharCode = (48, 49, 50, 51, 52, 53, 54, 55, 56, 57)
-    }
-
-    else if (promptSpecial === "yes") {
-      String.fromCharCode = (33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 58, 59, 60, 61, 62, 63, 64, 91, 92, 93, 94, 95, 96, 123, 124, 125, 126)
-    }
-
-  for (var i = 0; i = promptLength; i++) {
-    var password = Math.random(promptLowercase, promptUppercase, promptNumeric, promptSpecial);
+  if (promptLowercase === "yes") {
+    promptLowercase.input = (a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z)
   }
 
+  else if (promptUppercase === "yes") {
+    promptUppercase.input = (65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90)
+  }
+
+  else if (promptNumeric === "yes") {
+    promptNumeric.input = (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+  }
+
+  else if (promptSpecial === "yes") {
+
+  }
+
+  for (var i = 0; i < promptLength; i++) {
+    
+  }
 }
 
 // Write password to the #password input
@@ -81,7 +89,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
